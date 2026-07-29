@@ -165,11 +165,9 @@
   .profile.active .top-visits{font-size:24px;line-height:.8;text-align:right;min-width:34px}
 }
 
-/* Caption sits clear beneath the passport tile so it stays readable. */
+/* Caption only: sits lower and centred. Tile size unchanged. */
 @media(min-width:721px){
-  .world{align-content:start;padding-top:34px;padding-bottom:64px}
-  .book{height:min(720px,calc(100svh - 170px))}
-  .caption{bottom:20px;left:50%;transform:translateX(-50%);text-align:center}
+  .caption{bottom:14px;left:50%;transform:translateX(-50%);text-align:center}
 }
 
 /* Profile reads as one continuous page: no gutter, page edges or leaf shading. */
