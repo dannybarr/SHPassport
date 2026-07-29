@@ -151,3 +151,16 @@
   .profile.active .top-house{padding:12px 0}
   .profile.active .top-house-copy b{font-size:16px}
 }
+
+/* Mobile-only: the top-house ledger reads as three even, legible rows. */
+@media(max-width:720px){
+  .profile.active .top-houses{grid-template-columns:1fr;gap:0;padding:10px 0;margin:10px 0 4px}
+  .profile.active .top-house{grid-template-columns:18px 46px minmax(0,1fr) auto;gap:10px;align-items:center;min-height:62px;padding:10px 0!important;margin:0!important;border-right:0!important;border-bottom:1px solid #d5c9b3!important}
+  .profile.active .top-house:last-child{border-bottom:0!important}
+  .profile.active .top-rank{align-self:center;margin-top:0}
+  .profile.active .house-sketch{display:block;width:46px;height:46px}
+  .profile.active .house-sketch svg{width:46px;height:46px}
+  .profile.active .top-house-copy b{font-size:15px;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .profile.active .top-house-copy span{display:block;margin-top:3px;font:8px "DM Mono";color:#766b5c}
+  .profile.active .top-visits{font-size:24px;line-height:.8;text-align:right;min-width:34px}
+}
