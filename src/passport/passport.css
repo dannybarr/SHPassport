@@ -70,3 +70,21 @@
 .world.is-cover .edge-stamps{opacity:1}.world.is-cover .edge-stamp{background:#0a1f41;outline-color:#d9bc70;box-shadow:0 10px 22px rgba(35,28,16,.22)}.world.is-cover .edge-stamp:before{border-color:rgba(222,193,119,.82)}.world.is-cover .edge-stamp img{filter:saturate(.66) contrast(1.13) brightness(.82)}.world.is-cover .stamp-city{border-top-color:rgba(222,193,119,.7);color:#f2e4bf}.world.is-cover .stamp-city i{color:#f3d98c}.world:not(.is-cover) .shell{position:relative;background-image:linear-gradient(rgba(219,194,139,.19) 1px,transparent 1px),linear-gradient(90deg,rgba(219,194,139,.19) 1px,transparent 1px);background-size:26px 26px}.world:not(.is-cover) .shell:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,.25),transparent 35%);z-index:0}.world:not(.is-cover) .shell > *{position:relative;z-index:1}
 /* Hide the World tab for MVP — keep the code in place. */
 .tab[data-page="world"]{display:none!important}
+
+/* Mobile-only polish: gilt perimeter, tab breathing room, and profile leaf spacing. */
+@media(max-width:720px){
+  .book{border:1px solid #d9b85f;outline:1px solid #d9b85f;outline-offset:-4px;box-shadow:0 0 0 2px rgba(217,184,95,.18),0 35px 80px #0007}
+  .bar .tabs{gap:32px}
+  .bar .tab{padding:7px 4px}
+  .profile.active .identity-main{gap:14px;align-items:flex-start}
+  .profile.active .portrait{width:86px}
+  .profile.active .profile-name{font-size:34px}
+  .profile.active .identity p{font-size:10px}
+  .profile.active .doc-grid{margin-top:20px}
+  .profile.active .doc-grid div{padding:10px 0}
+  .profile.active .doc-grid b{font-size:11px}
+  .profile.active .stats{padding-top:24px}
+  .profile.active .stat-grid article{padding:10px 0}
+  .profile.active .stat-grid b{font-size:24px}
+  .profile.active .profile-note{margin-top:14px;padding-top:12px;font-size:10px}
+}
