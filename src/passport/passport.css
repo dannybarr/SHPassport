@@ -88,3 +88,17 @@
   .profile.active .stat-grid b{font-size:24px}
   .profile.active .profile-note{margin-top:14px;padding-top:12px;font-size:10px}
 }
+
+/* Mobile: remove the book gutter/page break so the profile reads as one continuous page. */
+@media(max-width:720px){
+  .world:not(.is-cover) .profile.active,
+  .world:not(.is-cover) .profile.active .identity,
+  .world:not(.is-cover) .profile.active .stats{background:#f5eee0;background-image:none;box-shadow:none}
+  .world:not(.is-cover) .profile.active .identity:before,
+  .world:not(.is-cover) .profile.active .stats:after,
+  .world:not(.is-cover) .profile.active:before,
+  .world:not(.is-cover) .profile.active:after{display:none}
+  .next-record{flex-wrap:wrap;gap:8px}
+  .next-record img{width:100%;height:120px;margin-top:4px;border-radius:2px;object-fit:cover}
+  .next-record b{font-size:18px}
+}
