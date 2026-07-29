@@ -47,7 +47,36 @@ function Index() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: passportCss }} />
+      <Banner />
       <div ref={hostRef} dangerouslySetInnerHTML={{ __html: passportHtml }} />
     </>
+  );
+}
+
+function Banner() {
+  const message = "Prototype — not affiliated with any party or organisation";
+  return (
+    <div className="fixed top-0 left-0 right-0 z-50 bg-warning text-warning-foreground h-7 overflow-hidden whitespace-nowrap">
+      <div className="inline-flex animate-marquee">
+        <span className="px-8 text-[11px] font-mono tracking-[0.12em] uppercase leading-7">{message}</span>
+        <span className="px-8 text-[11px] font-mono tracking-[0.12em] uppercase leading-7">{message}</span>
+        <span className="px-8 text-[11px] font-mono tracking-[0.12em] uppercase leading-7">{message}</span>
+        <span className="px-8 text-[11px] font-mono tracking-[0.12em] uppercase leading-7">{message}</span>
+      </div>
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+        .world { padding-top: 56px !important; }
+        @media (max-width: 720px) {
+          .world { padding-top: 40px !important; }
+          .book { height: calc(100svh - 52px) !important; }
+        }
+      `}</style>
+    </div>
   );
 }
