@@ -102,3 +102,65 @@
   .next-record img{width:100%;height:120px;margin-top:4px;border-radius:2px;object-fit:cover}
   .profile.active .stat-grid .next-record b{font-size:18px}
 }
+
+/* Mobile-only profile: one continuous, aligned column of records. */
+@media(max-width:720px){
+  .world:not(.is-cover) .profile.active .identity,
+  .world:not(.is-cover) .profile.active .stats{padding-left:22px;padding-right:22px}
+  .profile.active .identity{padding-top:26px;padding-bottom:4px}
+  .profile.active .stats{padding-top:26px;padding-bottom:34px}
+  .identity .concept{margin:14px 0 20px}
+  .identity-main{display:grid;grid-template-columns:92px minmax(0,1fr);gap:16px;align-items:start}
+  .identity-main .portrait,.identity-main .profile-photo{width:92px}
+  .identity-main>div .eyebrow{display:block;line-height:1.5;margin-bottom:8px}
+  .profile.active .profile-name{font-size:clamp(30px,10vw,38px);line-height:.92;margin:0 0 10px}
+  .identity p{font-size:10px;line-height:1.6;margin:0}
+  /* Passport document rows: label left, value right, every baseline aligned. */
+  .profile.active .doc-grid{grid-template-columns:1fr;margin-top:22px}
+  .profile.active .doc-grid div{display:grid;grid-template-columns:minmax(0,88px) minmax(0,1fr);align-items:center;gap:12px;padding:11px 0;min-height:44px}
+  .profile.active .doc-grid small{margin:0;align-self:center}
+  .profile.active .doc-grid b{margin:0;text-align:right;font-size:12px}
+  .profile.active .doc-grid .profile-location{justify-content:flex-end;gap:10px;width:auto}
+  .profile.active .doc-grid .profile-location b{white-space:nowrap}
+  .profile.active .doc-grid .profile-location img{width:72px;height:44px;margin-left:0}
+  .profile.active .profile-note{margin-top:20px;padding-top:14px;font-size:10px}
+  /* Stats read as a single ledger column so no two cards can mismatch. */
+  .profile.active .stats header p{font-size:11px;line-height:1.55}
+  .profile.active .top-houses-label{display:block;margin-top:22px}
+  .profile.active .stat-grid{grid-template-columns:1fr;margin-top:22px}
+  .profile.active .stat-grid article{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;column-gap:14px;padding:14px 0;min-height:0}
+  .profile.active .stat-grid article.memory-stat{min-height:0}
+  .profile.active .stat-grid article>b{grid-column:2;grid-row:1;font-size:30px;line-height:1;text-align:right}
+  .profile.active .stat-grid article>span{grid-column:1;grid-row:1;font-size:9px;letter-spacing:.09em}
+  .profile.active .stat-grid article>small{grid-column:1;grid-row:2;font-size:10px;margin-top:3px}
+  .profile.active .stat-grid .memory-drop{grid-column:1/-1;grid-row:3;margin-top:8px}
+  /* Place records: caption block, then a full-bleed image of consistent height. */
+  .profile.active .stat-grid .favourite-record,
+  .profile.active .stat-grid .next-record{grid-column:1/-1;grid-row:2;display:block;margin-top:8px}
+  .profile.active .stat-grid .favourite-record b,
+  .profile.active .stat-grid .next-record b{font-size:20px;text-align:left;display:block;margin-bottom:8px}
+  .profile.active .stat-grid .favourite-record img,
+  .profile.active .stat-grid .next-record img{width:100%;height:150px;object-fit:cover;display:block;border-radius:2px}
+  .profile.active .stat-grid article.next,
+  .profile.active .stat-grid article:has(.favourite-record){grid-template-columns:1fr}
+  .profile.active .stat-grid article:has(.favourite-record)>span,
+  .profile.active .stat-grid article.next>span{grid-column:1}
+  .profile.active .stat-grid article:has(.favourite-record)>small,
+  .profile.active .stat-grid article.next>small{grid-row:3;margin-top:8px}
+  .profile.active .stat-grid .next{padding-left:12px;padding-right:12px}
+  .profile.active .top-house{padding:12px 0}
+  .profile.active .top-house-copy b{font-size:16px}
+}
+
+/* Mobile-only: the top-house ledger reads as three even, legible rows. */
+@media(max-width:720px){
+  .profile.active .top-houses{grid-template-columns:1fr;gap:0;padding:10px 0;margin:10px 0 4px}
+  .profile.active .top-house{grid-template-columns:18px 46px minmax(0,1fr) auto;gap:10px;align-items:center;min-height:62px;padding:10px 0!important;margin:0!important;border-right:0!important;border-bottom:1px solid #d5c9b3!important}
+  .profile.active .top-house:last-child{border-bottom:0!important}
+  .profile.active .top-rank{align-self:center;margin-top:0}
+  .profile.active .house-sketch{display:block;width:46px;height:46px}
+  .profile.active .house-sketch svg{width:46px;height:46px}
+  .profile.active .top-house-copy b{font-size:15px;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .profile.active .top-house-copy span{display:block;margin-top:3px;font:8px "DM Mono";color:#766b5c}
+  .profile.active .top-visits{font-size:24px;line-height:.8;text-align:right;min-width:34px}
+}
